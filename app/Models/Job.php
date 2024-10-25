@@ -35,7 +35,7 @@ class Job extends Model
         return $this->hasMany(JobApplication::class);
     }
 
-    public function scopeFilter(Builder|QueryBuilder $query, array $filters)
+    public function scopeFilter(Builder|QueryBuilder $query, array $filters): Builder|QueryBuilder
     {
         return $query->when($filters['search'] ?? null, function ($query, $search) {
             $query->where(function ($query) use ($search) {
