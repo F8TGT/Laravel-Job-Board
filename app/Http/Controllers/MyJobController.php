@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\JobRequest;
 use App\Models\Job;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
 class MyJobController extends Controller
